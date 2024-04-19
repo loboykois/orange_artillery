@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "playwright": "^1.43.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.12.7"
+  },
+  "scripts": {
+    "artillery-start": "artillery run artillery_orange_login.yml --output results.json",
+    "artillery-report": "artillery report results.json",
+    "artillery-execute": "artillery run artillery_orange_login.yml --output orange_login.json & artillery report orange_login.json"
+  }
+}
+

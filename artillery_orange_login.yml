@@ -1,0 +1,12 @@
+config:
+  target: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+  phases:
+    - duration: 120
+      arrivalRate: 2
+      rampTo: 8
+  engines:
+    playwright: {}
+  processor: "./flows.ts"
+scenarios:
+  - engine: playwright
+    testFunction: "doLogin"
